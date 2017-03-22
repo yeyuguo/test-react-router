@@ -1,0 +1,80 @@
+/* ------ 注释模板 --- start ------ */
+/* ------ 注释模板 ---  end  ------ */
+html,body{
+    height: 100%;
+    width: 100%;
+}
+/* ------ 公共部分 --- start ------ */
+@gray: #222;
+@lg:#ddd;
+@lightWhite:#a7a0a2;
+.full{
+    width: 100%;
+    height: 100%;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+.wh(@width:100%;@heigh:100%){
+    width: @width;
+    height: @heigh;
+}
+.center{
+    text-align: center;
+}
+/* ------ 公共部分 ---  end  ------ */
+.content{
+    .full;
+}
+
+
+/* ------ stage --- start ------ */
+.stage{
+    .relative;
+    .wh(100%,680px);
+}
+/* ------ stage ---  end  ------ */
+
+
+
+/* ------ image --- start ------ */
+/*引用 img-figure:  .img-sec > .img-figure*/
+.img-sec{
+    .relative;
+    .full;
+    overflow: hidden;
+    background: @lg;
+    .img-figure{
+        .absolute;
+        .wh(320px,360px);
+        margin:0;
+        padding:40px;
+        background: #fff;
+        box-sizing: border-box;
+    }
+    figcaption{
+        .center;
+        .img-title{
+            margin:20px 0 0 0;
+            color:@lightWhite;
+            font-size: 16px;
+        }
+    }   
+}
+
+/* ------ image ---  end  ------ */
+
+
+/* ------ controller --- start ------ */
+.controller-nav{
+    .absolute;
+    left:0;
+    bottom:30px;
+    z-index:101;
+    width: 100%;
+    text-align: center;
+}
+/* ------ controller ---  end  ------ */
